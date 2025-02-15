@@ -25,5 +25,9 @@ task_entry.pack(pady=10) # Add some vertical padding
 add_button = tk.Button(root, text="Add Task", command=add_task)
 add_button.pack() # Display the button
 
+# Task Listbox
+task_listbox = tk.Listbox(root, width=50, height=15)
+task_listbox.pack(pady=10)
+
 # Run the Application
 root.mainloop()
