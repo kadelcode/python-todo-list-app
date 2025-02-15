@@ -4,6 +4,14 @@ from tkinter import messagebox
 # File to save tasks
 TASKS_FILE = "tasks.txt"
 
+def add_task():
+    task = task_entry.get()
+    if task:
+        task_listbox.insert(tk.END, task)
+        task_entry.delete(0, tk.END)
+    else:
+        messagebox.showwarning("Warning", "Task cannot be empty")
+
 # Create GUI Window
 root = tk.Tk()
 root.title("To-Do List App")
